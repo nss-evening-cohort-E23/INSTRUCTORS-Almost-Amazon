@@ -1,6 +1,26 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
+const endpoint = 'https://almost-727b3-default-rtdb.firebaseio.com/';
+
+// const getBooks = () => new Promise((resolve, reject) => {
+//   fetch(`${endpoint}/books.json`, {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     }
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       if (data) {
+//         resolve(Object.values(data));
+//       } else {
+//         resolve([]);
+//       }
+//     })
+//     .catch(reject);
+// });
+
 const emptyBooks = () => {
   const domString = '<h1>No Books</h1>';
   renderToDOM('#store', domString);
@@ -30,4 +50,4 @@ const showBooks = (array) => {
   renderToDOM('#store', domString);
 };
 
-export { showBooks, emptyBooks };
+export { showBooks, emptyBooks, getBooks };
