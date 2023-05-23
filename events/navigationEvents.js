@@ -1,5 +1,5 @@
 import { signOut } from '../utils/auth';
-// import { getBooks, showBooks } from '../pages/books';
+import { getBooks, showBooks } from '../pages/books';
 
 // navigation events
 const navigationEvents = () => {
@@ -14,7 +14,7 @@ const navigationEvents = () => {
 
   // TODO: ALL BOOKS
   document.querySelector('#all-books').addEventListener('click', () => {
-    // getBooks().then(showBooks);
+    getBooks().then(showBooks);
   });
 
   // FIXME: STUDENTS Create an event listener for the Authors
